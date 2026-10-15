@@ -1,0 +1,227 @@
+1)  Driving Licence Eligibility
+  
+
+  public class Drivinglicence{
+      public static void main(String args[]){
+        int age=19;
+        String  eligible=(age>=18)?"yes":"noteligible";
+        System.out.println(eligible);
+      }
+    }
+        
+
+
+2)  Even Number and Range Checker
+
+   
+   
+   public class Evennumber {
+     public Evennumber() {
+     }
+
+     public static void main(String[] var0) {
+        byte var1 = 13;
+        if (var1 % 2 == 0 && var1 > 10) {
+           System.out.println("Even and greater than 10");
+        } else {
+           System.out.println("not even or less than 10");
+        }
+ 
+       }
+   }
+
+
+
+3)  Student Pass Checker
+
+
+     import java.util.Scanner;
+     public class StudentPassChecker {
+      public static void main(String args[])
+     {
+         Scanner a=new Scanner(System.in);
+         System.out.println("Enter a mark:");
+         int mark=a.nextInt();
+         System.out.println("Enter a percentage:");
+         int percentage=a.nextInt();
+         boolean result=(mark >=40&&percentage>=75);
+         System.out.println(result);
+        
+       }
+    
+    
+   }
+
+4)  Shopping Discount Eligibility
+       
+     import java.util.Scanner;
+     public class ShoppingDiscountEligibility {
+       public static void main(String[] args) {
+          Scanner sc=new Scanner(System.in);
+          System.out.println("premium member ?");
+          String premium =sc.nextLine();
+          System.out.println("Enter total purchase amount:");
+          double purchase = sc.nextDouble();
+          String  discounteligibility=(purchase>=2000 || premium=="yes")?"eligible for discount": "not eligible";
+       {
+          System.out.println("your eligibility :"+discounteligibility);
+  }
+        
+      }
+    
+  }
+
+
+
+5)  Password Length Validator
+
+
+      import java.util.Scanner;
+         public class PasswordLengthValidator {
+         public static  void main(String args[])
+     {
+         Scanner sc=new Scanner(System.in);
+         System.out.println("Enter a password:");    
+         String password=sc.nextLine();
+         System.out.println("boolean accountstatus=true or false:");
+         boolean accountstatus=sc.nextBoolean();
+         String passwordlength=(password.length()>=8)&&accountstatus?"valid password":"invalid password";
+         System.out.println(passwordlength);
+      }
+  }
+
+
+
+6)   ATM Withdrawal Validation
+
+             import java.util.Scanner; 
+             public class ATMWithdrawalValidation {
+             public static void main(String[] args){
+             Scanner scanner = new Scanner(System.in);
+             System.out.print("Enter the Balance: ");
+             double balance = scanner.nextDouble();  
+             System.out.print("Enter the Withdrawal Amount: ");
+             double withdrawalAmount = scanner.nextDouble();
+            String withdrawalStatus = (withdrawalAmount <= balance && withdrawalAmount %100 == 0) ? "Withdrawal Successful" : "InsufficientBalance";
+            System.out.println(withdrawalStatus);
+
+            }
+       }
+
+
+
+7) Login Attempt Controller
+    
+          
+         mport java.util.*;
+import java.util.Scanner;
+
+public class loginattemptcontroller
+{
+    public static void main (String[]args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your maximun attempts: ");
+        int maxattempts = scanner.nextInt();
+        System.out.println("Enter your failed attempts: ");
+        int failedattempts = scanner.nextInt();
+        String result = (failedattempts < maxattempts) ? "Login successful" : "Login failed";
+        {
+            System.out.println(result);
+            if(result.equals("Login failed"))
+            {
+                failedattempts++;
+                System.out.println("Failed attempts: " + failedattempts);
+            }
+        }    
+    }    
+}    
+
+
+
+8)  SmartBatteryCharging
+
+
+import java.util.*;
+import java.util.Scanner;
+
+public class smartbatterycharging
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the current battery percentage: ");
+        int batteryPercentage = scanner.nextInt();
+        System.out.println("Enter the Temperature :");
+        int temperature = scanner.nextInt();
+
+        String chargingStatus = (batteryPercentage < 90 && temperature < 45 && temperature > 10) ? "Charging allowed" : "Charging not allowed";
+        System.out.println("Battery Status: " + chargingStatus);
+        if (chargingStatus.equals("Charging allowed")) 
+        {
+           System.out.println(batteryPercentage+5);
+        
+        }
+    }
+}
+
+
+
+9)  Online Order Free Delivery
+
+
+
+import java.util.*;
+import java.util.Scanner;
+public class onlineorderfreedelivery
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the total order amount: ");
+        double orderAmount = scanner.nextDouble();
+        System.out.println("are u a premium customer? (yes/no): ");
+        String isPremium = scanner.next();
+
+        String deliveryStatus = (orderAmount >= 1000 || isPremium.equals("yes")) ? "Free Delivery" : "Delivery Charges Apply";
+        System.out.println("Delivery Status: " + deliveryStatus);
+        if(deliveryStatus.equals("Delivery Charges Apply"))
+        {
+            System.out.println("Delivery Charges: "+(orderAmount+50));
+        }
+    }    
+    
+}
+
+
+10) Inventory Reorder Checker
+
+import java.util.*;
+import java.util.Scanner;
+public class inventoryreorderchecker
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the current stock quantity: ");
+        int stockQuantity = scanner.nextInt();
+        System.out.println("Enter the minimum stock level: ");
+        int minStockLevel = scanner.nextInt();
+        System.out.println("Enter the incoming stock quantity: ");
+        int incomingStock = scanner.nextInt();
+
+        int currentStock = stockQuantity + incomingStock; // Example reorder level calculation
+
+        String reorderStatus = (currentStock <= minStockLevel) ? "Reorder Required" : "Stock Sufficient";
+        System.out.println("Reorder Status: " + reorderStatus);
+    }    
+}
+
+
+
+     
+ 
+ 
+              
+
+
